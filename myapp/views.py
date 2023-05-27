@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import Advantages, AdvantagesImage, Feedback, Faq, Contacts, Rating, Subscription
-from .serializers import AdvantagesSerializer, AdvantagesImageSerializer, FeedbackSerializer, FaqSerializer, ContactsSerializer, RatingSerializer, SubscribptionSerializer
+from .models import Advantages, AdvantagesImage, Feedback, Faq, Contacts, Rating, Subscribption, SubscribeGreen
+from .serializers import AdvantagesSerializer, AdvantagesImageSerializer, FeedbackSerializer, FaqSerializer, ContactsSerializer, RatingSerializer, SubscribptionSerializer, SubscribeGreenSerializer
 # Create your views here.
 
 
@@ -54,9 +54,17 @@ class RatingDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = RatingSerializer
 
 class SubscribptionList(generics.ListCreateAPIView):
-    queryset = Subscription.objects.all()
+    queryset = Subscribption.objects.all()
     serializer_class = SubscribptionSerializer
 
 class SubscribptionDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Subscription.objects.all()
+    queryset = Subscribption.objects.all()
     serializer_class = SubscribptionSerializer
+
+class SubscribeGreenList(generics.ListCreateAPIView):
+    queryset = SubscribeGreen.objects.all()
+    serializer_class = SubscribeGreenSerializer
+
+class SubscribeGreenDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = SubscribeGreen.objects.all()
+    serializer_class = SubscribeGreenSerializer

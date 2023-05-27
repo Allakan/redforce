@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Advantages, AdvantagesImage, Feedback, Faq, Contacts, Rating, Subscription
+from .models import Advantages, AdvantagesImage, Feedback, Faq, Contacts, Rating, Subscribption, SubscribeGreen
 
 class AdvantagesSerializer(serializers.ModelSerializer):
     class Meta:
@@ -33,5 +33,10 @@ class RatingSerializer(serializers.ModelSerializer):
 
 class SubscribptionSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Subscription
+        model = Subscribption
+        fields = '__all__'
+
+class SubscribeGreenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SubscribeGreen
         fields = '__all__'

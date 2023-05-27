@@ -40,14 +40,24 @@ class Rating(models.Model):
     rate = models.DecimalField(max_digits=10, decimal_places=2)
     feedbacks = models.IntegerField()
 
-class Point(models.Model):
-    text = models.CharField(max_length=200)
 
-class Subscription(models.Model):
+class Subscribption(models.Model):
     quantity = models.IntegerField()
     price = models.CharField(max_length=50)
     audience = models.CharField(max_length=50)
-    points = models.ManyToManyField(Point)
+    point1 = models.CharField(max_length=100)
+    point2 = models.CharField(max_length=100)
+    point3 = models.CharField(max_length=100)
+    point4 = models.CharField(max_length=100)
     note = models.TextField()
 
+class SubscribeGreen(models.Model):
+    quantity = models.IntegerField()
+    price = models.CharField(max_length=50)
+    audience = models.CharField(max_length=50)
+    point1 = models.CharField(max_length=100)
+    point2 = models.CharField(max_length=100)
+    point3 = models.CharField(max_length=100)
+    point4 = models.CharField(max_length=100)
+    note = models.TextField()
     

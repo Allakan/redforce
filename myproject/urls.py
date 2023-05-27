@@ -22,6 +22,7 @@ from myapp.views import FaqList, FaqDetail
 from myapp.views import ContactsList, ContactsDetail
 from myapp.views import RatingList, RatingDetail
 from myapp.views import SubscribptionList, SubscribptionDetail
+from myapp.views import SubscribeGreenList, SubscribeGreenDetail
 
 urlpatterns = [
     path('advantages/', AdvantagesList.as_view(), name='advantages_list'),
@@ -38,4 +39,6 @@ urlpatterns = [
     path('rating/<int:pk>/', RatingDetail.as_view(), name='rating_detail'),
     path('subscribption/', SubscribptionList.as_view(), name='subscribption_list'),
     path('subscribption/<int:pk>/', SubscribptionDetail.as_view(), name='subscribption_detail'),
+    path('subscribegreen/', SubscribeGreenList.as_view(), name='subscribegreen_list'),
+    path('subscribegreen/<int:pk>/', SubscribeGreenDetail.as_view(), name='subscribegreen_detail'),
 ]
